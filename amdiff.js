@@ -14,17 +14,17 @@ console.log("")
 console.log("AMDIFF is a command line comparision utility for JSON-Automerge files with save file function for differences")
 console.log("")
 console.log("Usage:")
-console.log("    node amdiff.js <file_old> <file_actual> [verbose]")
+console.log("    node amdiff.js <old_file> <actual_file> [verbose]")
 console.log("    node amdiff.js help")
 console.log("")
 console.log("Help:")
 console.log("    Displays this manual")
 console.log("")
-console.log("File_old:")
-console.log("    Filename of previous file")
+console.log("Old_file:")
+console.log("    Name of previous file")
 console.log("")
-console.log("File_actual:")
-console.log("    Filename of actual file")
+console.log("Actual_file:")
+console.log("    Name of actual file")
 console.log("")
 console.log("Verbose:")
 console.log("    Enable verbose mode")
@@ -92,6 +92,6 @@ if (isEmpty(filediff)){ // Se não houver diferenças sai
   console.log('\x1b[1m\x1b[31m%s','\nNao tem diferencas entre os arquivos!','\x1b[0m\n');
   return null
 }else{
-  fs.writeFileSync(process.argv[2]+'>'+process.argv[3]+".diff", JSON.stringify(filediff), {encoding: null}); // Salva o arquivo local .diff com a diferença entre os dois arquivos
+  fs.writeFileSync(process.argv[2]+'-'+process.argv[3]+".diff", JSON.stringify(filediff), {encoding: null}); // Salva o arquivo local .diff com a diferença entre os dois arquivos
   if(verbose) console.log('\x1b[36m%s\x1b[0m',"Arquivo salvo com sucesso"); 
 }

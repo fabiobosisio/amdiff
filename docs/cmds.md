@@ -6,17 +6,17 @@ AMDIFF v0.1.0
 AMDIFF is a command line comparision utility for JSON-Automerge files with save file function for differences
 
 Usage:
-    node amdiff.js <file_old> <file_actual> [verbose]
+    node amdiff.js <old_file> <actual_file> [verbose]
     node amdiff.js help
 
 Help:
     Displays this manual
     
-File_old:
-    Filename of previous file
+Old_file:
+    Name of previous file
 
-File_old:
-    Filename of actual file
+Actual_file:
+    Name of actual file
 
 Verbose:
     Enable verbose mode
