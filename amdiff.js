@@ -92,6 +92,8 @@ if (isEmpty(filediff)){ // Se não houver diferenças sai
   console.log('\x1b[1m\x1b[31m%s','\nNao tem diferencas entre os arquivos!','\x1b[0m\n');
   return null
 }else{
-  fs.writeFileSync(process.argv[2]+'-'+process.argv[3]+".diff", JSON.stringify(filediff), {encoding: null}); // Salva o arquivo local .diff com a diferença entre os dois arquivos
+  let old = process.argv[2].substr(0, process.argv[2].lastIndexOf('.')) || process.argv[2];
+  let newest = process.argv[3].substr(0, process.argv[3].lastIndexOf('.')) || process.argv[3];
+  fs.writeFileSync(old+'-'+newest+".diff", JSON.stringify(filediff), {encoding: null}); // Salva o arquivo local .diff com a diferença entre os dois arquivos
   if(verbose) console.log('\x1b[36m%s\x1b[0m',"Arquivo salvo com sucesso"); 
 }
