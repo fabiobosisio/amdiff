@@ -24,7 +24,7 @@ sudo apt install nodejs
 npm i automerge@1.0.1-preview.7
 ```
 
-4. Clone the `amrw` repository to use the tool:
+4. Clone the `amdiff` repository to use the tool:
 
 ```
 git clone https://github.com/fabiobosisio/amdiff.git
