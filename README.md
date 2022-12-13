@@ -30,7 +30,7 @@ npm i automerge@1.0.1-preview.7
 git clone https://github.com/fabiobosisio/amdiff.git
 ```
 
-5. Use the editor inside the `/home/user/amdiff` directory
+5. Use the diff app inside the `/home/user/amdiff` directory
 
 The versions used in the tests were:
 -   NPM v8.13.2
